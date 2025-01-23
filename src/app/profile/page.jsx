@@ -5,7 +5,7 @@ const page = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
   if (!user) {
-    redirect("https://raselmridha792.kinde.com/auth/cx/_:nav&m:login&psid:019492e575492c16ffb7b58240553b8e");
+    redirect("/protected");
   }
   return (
     <div className="min-h-screen flex items-center justify-center">
