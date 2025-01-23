@@ -1,8 +1,4 @@
-import {
-  RegisterLink,
-  LoginLink,
-  LogoutLink,
-} from "@kinde-oss/kinde-auth-nextjs/components";
+import { LoginLink, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
 import React from "react";
@@ -24,24 +20,21 @@ const Navbar = async () => {
           </div>
           <div>
             <ul className="flex gap-5 text-2xl">
-              <li>
+              <li className="hover:text-black">
                 <Link href={"/"}>Home</Link>
               </li>
-              <li>
+              <li className="hover:text-black">
                 <Link href={"/profile"}>Profile</Link>
               </li>
               {user ? (
                 <>
-                  <li>
+                  <li className="hover:text-black">
                     <LogoutLink>Logout</LogoutLink>
                   </li>
                 </>
               ) : (
                 <>
-                  <li>
-                    <RegisterLink>Sign Up</RegisterLink>
-                  </li>
-                  <li>
+                  <li className="hover:text-black">
                     <LoginLink>Login</LoginLink>
                   </li>
                 </>
