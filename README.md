@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Blog Viewer Application
 
-## Getting Started
+## live link : https://ejp-10-next-js-blog-site.vercel.app
 
-First, run the development server:
+This project is a simple blog viewer application built with **Next.js**. It demonstrates core concepts like routing, server and client components, dynamic routes, authentication, and data fetching.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Objective
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The goal of this project is to implement a blog viewer with essential navigation and content viewing features, focusing on:
+- Static and dynamic routes.
+- Fetching data from a mock API.
+- Protecting routes using authentication (via **Kinde Auth**).
+- Clean and responsive design using **Tailwind CSS**.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Features
 
-## Learn More
+### 1. Home Page (`/`)
+- Displays a list of blog post titles fetched from a mock API.
+- Each blog title links to a detailed view of the post.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Blog Details Page (`/blog/[id]`)
+- Uses dynamic routing to display details of a specific blog post.
+- Fetches blog details based on the `id` parameter from the URL.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Profile Page (`/profile`)
+- A protected static route showing a message like _"Welcome to your profile!"_.
+- Authentication managed using **Kinde Auth**.
+- Unauthenticated users are redirected to the login page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Navigation
+- A header with links to:
+  - Home (`/`)
+  - Profile (`/profile`)
+- Displays:
+  - "Login" button if the user is not authenticated.
+  - "Logout" button if the user is authenticated.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📜 Requirements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Mock API
+- **Fetch all posts:**  
+  `GET https://jsonplaceholder.typicode.com/posts`
+- **Fetch a specific post by ID:**  
+  `GET https://jsonplaceholder.typicode.com/posts/[id]`
+
+---
+
+## 🛠️ Tech Stack
+- **Framework:** Next.js
+- **Authentication:** Kinde Auth
+- **Styling:** Tailwind CSS
+- **Mock API:** JSONPlaceholder
+
+---
